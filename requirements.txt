@@ -1,0 +1,10 @@
+authy==2.2.5
+Django==3.0.5
+django-environ
+django-phonenumber-field==4.0.0
+djangorestframework==3.11.0
+djangorestframework-simplejwt==4.4.0
+Markdown==3.2.1
+phonenumbers==8.12.1
+pytest
+docutils

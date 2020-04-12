@@ -1,0 +1,13 @@
+[flake8]
+ignore = W503
+max-line-length = 120
+exclude =
+    .git,
+    tmp,
+    __pycache__,
+    migrations,
+    manage.py,
+    *_pb2*.py
+per-file-ignores =
+    settings.py:F401,F403,F405,E402
+    apps.py:F401

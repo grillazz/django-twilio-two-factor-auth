@@ -17,3 +17,16 @@ Now what you need to start:
 
 3. next you will python manege.py migrations and python manege.py createsuperuser
 
+## ToDo
+
+- [ ] Uni tests 80% coverage
+- [ ] Update Readme File
+- [ ] Postmap test collection
+
+## License
+
+[MIT](http://www.opensource.org/licenses/mit-license.html)
+
+## Disclaimer
+
+No warranty expressed or implied. Software is as is.

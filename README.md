@@ -1,3 +1,5 @@
+## About
+
 In these days we need to be sure that data which we using and sharing is consistent and we can trust in it.
 One of methods is protect your api as best as possibile.
 I decided to share my approach to protect Django REST Framework JWT with Twilio 2FA.
@@ -9,6 +11,8 @@ If you don't please visit first:
 https://www.djangoproject.com/ and https://www.django-rest-framework.org/
 You can also write some good book i.e. https://wsvincent.com/best-django-books/
 
+## Local development
+
 Now what you need to start:
 
 1. create Twilio account and add Authy App in Twilio console. Instructions you can find here:...
@@ -17,11 +21,16 @@ Now what you need to start:
 
 3. next you will python manege.py migrations and python manege.py createsuperuser
 
+## How it works
+
+cURL examples in progress...
+
 ## ToDo
 
 - [ ] Uni tests 80% coverage
 - [ ] Update Readme File
 - [ ] Postmap test collection
+- [ ] cURL exmpales
 
 ## License
 

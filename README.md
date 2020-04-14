@@ -29,7 +29,7 @@ cURL examples in progress...
 
 - [ ] Uni tests 80% coverage
 - [ ] Update Readme File
-- [ ] Postmap test collection
+- [x] Postman test collection
 - [ ] cURL exmpales
 
 ## License

@@ -1,6 +1,6 @@
 ## About
 
-In these days we need to be sure that data which we using and sharing is consistent and we can trust in it.
+ In these days we need to be sure that data which we using and sharing is consistent and we can trust in it.
 One of methods is protect your api as best as possibile.
 I decided to share my approach to protect Django REST Framework JWT with Twilio 2FA.
 Hope it will save time which i spent to implement Twilio 2FA for REST API safely.
@@ -30,7 +30,7 @@ cURL examples in progress...
 - [ ] Uni tests 80% coverage
 - [ ] Update Readme File
 - [x] Postman test collection
-- [ ] cURL exmpales
+- [ ] cURL examples
 
 ## License
 

@@ -7,4 +7,6 @@ djangorestframework-simplejwt==4.4.0
 Markdown==3.2.1
 phonenumbers==8.12.1
 pytest
+pytest-cov
+pytest-django
 docutils

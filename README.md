@@ -27,7 +27,7 @@ cURL examples in progress...
 
 ## ToDo
 
-- [ ] Uni tests 80% coverage
+- [x] Uni tests 80% coverage
 - [ ] Update Readme File
 - [x] Postman test collection
 - [ ] cURL examples

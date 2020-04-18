@@ -20,5 +20,3 @@ urlpatterns = [
     # Application Rest Api uris
     path('api/', include((urlpatterns_auth, 'custom_auth'))),
 ]
-
-

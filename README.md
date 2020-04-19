@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/grillazz/twofa_for_drf.svg?branch=master)](https://travis-ci.com/grillazz/twofa_for_drf)
+
 ## About
 
  In these days we need to be sure that data which we using and sharing is consistent and we can trust in it.

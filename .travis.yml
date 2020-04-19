@@ -5,6 +5,10 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install coveralls
 # command to run tests
 script:
   - pytest
+# send coverage report to coveralls
+after_success:
+  coveralls

@@ -6,7 +6,7 @@
 One of methods is protect your api as best as possibile.
 I decided to share my approach to protect Django REST Framework JWT with Twilio 2FA.
 Hope it will save time which i spent to implement Twilio 2FA for REST API safely.
-In this sample project i showing integration with Verify API and Authy API from Twilio for Python.
+In this sample project i showing integration with Authy API from Twilio for Python.
 
 My assumption here is that you have exp with Django and DRF.
 If you don't please visit first:
@@ -17,11 +17,11 @@ You can also write some good book i.e. https://wsvincent.com/best-django-books/
 
 Now what you need to start:
 
-1. create Twilio account and add Authy App in Twilio console. Instructions you can find here:...
+1. Create Twilio account and add Authy App in Twilio console. You can find the instructions here: https://www.twilio.com/try-twilio
 
-2. clone this project and in setting.py replace ACCOUNT_SECURITY_API_KEY value with your new key
+2. Clone this project and in setting.py replace ACCOUNT_SECURITY_API_KEY value with your new key.
 
-3. next you will python manege.py migrations and python manege.py createsuperuser
+3. Next you will python manege.py migrations and python manege.py createsuperuser
 
 ## How it works
 
@@ -30,7 +30,7 @@ cURL examples in progress...
 ## ToDo
 
 - [x] Uni tests 80% coverage
-- [ ] Update Readme File
+- [x] Update Readme File
 - [x] Postman test collection
 - [ ] cURL examples
 

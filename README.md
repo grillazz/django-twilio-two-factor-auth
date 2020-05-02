@@ -25,7 +25,7 @@ Now what you need to start:
 
 ## How it works
 
-#### STEP 0: Django Rest Framework JWT Authentication when 2FA disabled:
+#### STEP 0A: Django Rest Framework JWT Authentication when 2FA disabled.
 
 for below cURL
 
@@ -86,6 +86,25 @@ if SUCCESS we receive response with HTTP code 204 with no JSON body
 
 ```
 
+#### STEP 0B: Django Rest Framework JWT Authentication when 2FA enabled.
+
+for below cURL
+
+```console
+curl --location --request POST 'http://127.0.0.1:8000/api/token/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "twilio",
+    "password": "twiliopass"
+}'
+```
+
+we receive response with HTTP code 206 with JSON body
+```json
+{
+    "message": "SMS request successful. Two Factor Token verification expected."
+}
+```
 
 
 

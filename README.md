@@ -106,9 +106,30 @@ we receive response with HTTP code 206 with JSON body
 }
 ```
 
+#### STEP 3: User Authentication view supported by Twilo API Two Factor
+
+This view verify if Twilio 2FA registered user entered correct 7 digit token.
+Token will be requested by TwoFaTokenObtainPairView only for 2FA registered users
+If SUCCESS: user receive refresh and access JWT.
+
+```console
+curl --location --request POST 'http://127.0.0.1:8000/api/2fa/token-verify/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "twilio",
+    "password": "twiliopass",
+    "token": "7654321"
+}'
+```
+if SUCCESS we receive response with HTTP code 200 with JSON body
+```json
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4ODQ5ODI3OCwianRpIjoiY2U5M2I5ZjExMTE1NGMxYThiZmEzNWJkZmE1NmMyNmEiLCJ1c2VyX2lkIjoyfQ.FZUeVVzPWl4dUjPEUa6yyfmOLPLpG5qK6nq5AyC6jY0",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg4NDEyMTc4LCJqdGkiOiJlMGViZGU4Zjk1MDg0YWU2YmYxZmY4YWE0MDk2ODE2ZCIsInVzZXJfaWQiOjJ9.gU-onXzHKpc_jn9RyUVZS940_ivL7pQfDbU4ltv5w-c"
+}
+```
 
 
-cURL examples in progress...
 
 ## ToDo
 

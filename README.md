@@ -25,7 +25,7 @@ Now what you need to start:
 
 ## How it works
 
-#### Step 0: Django Rest Framework JWT Authentication when 2FA disabled:
+#### STEP 0: Django Rest Framework JWT Authentication when 2FA disabled:
 
 for below cURL
 
@@ -46,7 +46,7 @@ we receive response with HTTP code 200 with JSON body
 }
 ```
 
-#### Step 1:  Phone verification view with TwilioAuthy API.
+#### STEP 1:  Phone verification view with Twilio Authy API.
 
 This endpoint will check if user mobile phone number is valid.
 If YES Twilio API send 4 digit verification token via SMS.
@@ -59,8 +59,33 @@ curl --location --request POST 'http://127.0.0.1:8000/api/2fa/phone-verify/' \
 --data-raw '{
 	"authy_phone": "+48123456789"
 }'
+
+...
+if SUCCESS we receive response with HTTP code 204 with no JSON body
+
 ```
-we receive response with HTTP code 204 with no JSON body
+
+
+#### STEP 2: Phone registration view with Twilio Authy API
+
+View will validate if 4 digit token sent to user phone number is valid.
+If Twilio verification check pass in next step Twilio API call will register user for 2FA
+If success: user instance will be updated with verified phone number and received from Twilio API authy_id
+
+```console
+curl --location --request POST 'http://127.0.0.1:8000/api/2fa/phone-register/' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg4NDExNTMxLCJqdGkiOiJmMzFmN2IyNmI4MDM0NDRjOTA0M2Q3ODNmNGVjYTEzMyIsInVzZXJfaWQiOjJ9.j9rJjFpdM9arpn905bL45nyGQoMpJhkC0mmHRbUm8QA' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"authy_phone": "+48123456789",
+	"token": "1234" 
+}'
+
+...
+if SUCCESS we receive response with HTTP code 204 with no JSON body
+
+```
+
 
 
 
@@ -71,7 +96,8 @@ cURL examples in progress...
 - [x] Uni tests 80% coverage
 - [x] Update Readme File
 - [x] Postman test collection
-- [ ] cURL examples
+- [x] cURL examples
+- [ ] rest api flows
 
 ## License
 

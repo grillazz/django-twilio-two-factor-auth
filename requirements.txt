@@ -1,5 +1,5 @@
 authy==2.2.5
-Django==3.0.5
+Django==3.0.7
 django-environ
 django-phonenumber-field==4.0.0
 djangorestframework==3.11.0

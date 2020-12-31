@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+authy = "*"
+django-environ = "*"
+django-phonenumber-field = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+phonenumbers = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+docutils = "*"
+Django = "*"
+Markdown = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

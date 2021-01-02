@@ -16,11 +16,12 @@ pytest-django = "*"
 docutils = "*"
 Django = "*"
 Markdown = "*"
+drf_yasg = "*"
+black = "*"
+flake8 = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.9"
 
-[pipenv]
-allow_prereleases = true

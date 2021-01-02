@@ -2,7 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/grillazz/twofa_for_drf/badge.svg?branch=master)](https://coveralls.io/github/grillazz/twofa_for_drf?branch=master)
 ## About
 
- In these days we need to be sure that data which we using and sharing is consistent and we can trust in it.
+In these days we need to be sure that data which we using and sharing is consistent and we can trust in it.
 One of methods is protect your api as best as possibile.
 I decided to share my approach to protect Django REST Framework JWT with Twilio 2FA.
 Hope it will save time which i spent to implement Twilio 2FA for REST API safely.
@@ -13,6 +13,59 @@ If you don't please visit first:
 https://www.djangoproject.com/ and https://www.django-rest-framework.org/
 You can also write some good book i.e. https://wsvincent.com/best-django-books/
 
+### Requirements
+
+* [GIT](https://git-scm.com/) version control
+* [Python 3](https://www.python.org/downloads/)
+* [Install Python3](https://installpython3.com/)
+
+## Installation
+## 1. Get the code
+
+Before running an installation you have to clone an app code by running:
+```bash
+git clone ...
+```
+## 2. Install pipenv for manage venvs and packages
+
+You can find pipenv guide here: https://realpython.com/pipenv-guide/
+
+Some advanced pipenv techniques you can find here: https://pipenv-fork.readthedocs.io/en/latest/advanced.html
+```bash
+pip3 install pipenv
+```
+#### To activate the virtual environment type
+```bash
+pipenv shell
+```
+#### Install default packages
+```bash
+pipenv install
+```
+#### Install dev packages
+```bash
+pipenv install --dev
+```
+
+## 3. Setup backend environment with Docker and Compose
+
+#### add local .env file and update it to align to your local env if necessary
+```bash
+cp .env.example .env
+```
+
+#### Build project from docker images, apply migrations and load fixtures at once
+```bash
+make build
+```
+
+#### run project
+```bash
+make up
+```
+
+
+
 ## Local development
 
 Now what you need to start:
@@ -21,7 +74,7 @@ Now what you need to start:
 
 2. Clone this project and in setting.py replace ACCOUNT_SECURITY_API_KEY value with your new key.
 
-3. Next you will python manege.py migrations and python manege.py createsuperuser
+
 
 ## How it works
 

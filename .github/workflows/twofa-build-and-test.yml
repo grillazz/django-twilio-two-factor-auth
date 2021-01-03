@@ -1,0 +1,27 @@
+
+name: 2FA for Django REST Unit Tests
+
+on:
+  pull_request:
+    branches: [master, develop]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.9.0
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9.0
+      - name: Install pipenv
+        run: pip install pipenv
+      - name: Install required libs
+        run: pipenv install --dev --deploy --system
+      - name: Run tests
+        run: pytest
+        env:
+          DJANGO_DEBUG: True
+          DJANGO_SECRET_KEY: yoursecretgoeshere
+          DJANGO_ALLOWED_HOSTS: "*"
+          TWILLIO_ACCOUNT_SECURITY_API_KEY: your_twilio_api_key

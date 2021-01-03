@@ -35,3 +35,8 @@ flake8:
 test:
 	docker-compose run --rm web pytest
 
+lock:
+	pipenv lock --pre
+
+requirements:
+	pipenv lock -r > requirements.txt

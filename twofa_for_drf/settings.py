@@ -1,6 +1,8 @@
 import os
 from datetime import timedelta
+import environ
 
+env = environ.Env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -10,12 +12,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "your_super_secret"
+SECRET_KEY = env.str("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool("DJANGO_DEBUG", False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
 
 
 # Application definition
@@ -128,4 +130,4 @@ REST_FRAMEWORK = {
 }
 
 # Twilio Api Application Key
-ACCOUNT_SECURITY_API_KEY = "your_twilio_api_key"
+ACCOUNT_SECURITY_API_KEY = env.str("TWILLIO_ACCOUNT_SECURITY_API_KEY")
